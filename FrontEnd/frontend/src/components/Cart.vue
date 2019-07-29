@@ -10,7 +10,7 @@
                 <td class="table-td">수량</td>
                 <td class="table-td"></td>
             </tr>
-            <tr v-for="val in this.listData" >
+            <tr v-for="val in this.listData"  >
                 <td>{{val.id}}</td>
                 <td>{{val.img}}</td>
                 <td>{{val.name}}</td>
