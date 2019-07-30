@@ -1,7 +1,7 @@
 <template>
   <div class="cart">
     <span>
-      <v-btn text>뒤로가기</v-btn>
+      <v-btn text><a href= "/" >뒤로가기</a> </v-btn>
     </span>
     <br />
     <br />
@@ -13,7 +13,7 @@
     <br />
     <table class="cart-table">
       <tr class="tr-name">
-        <!-- <td class="table-td">No.</td> -->
+        <!-- <td class="table-td">No.</td> -->  
         <td class="table-td">사진</td>
         <td class="table-td">이름</td>
         <td class="table-td">수량</td>
@@ -92,7 +92,9 @@ export default {
       localpay: function() {
         //todo
         // post to backend server "nfc"
-        this.$router.push("/about");
+        alert("주문 완료! ")
+        this.$router.push("/");
+
       }
   }
 };
