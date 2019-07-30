@@ -3,10 +3,10 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
+var mongoose = require('mongoose');
 var foodRouter = require('./routes/food');
 var indexRouter = require('./routes/index');
-
+var config = require('./config');
 var app = express();
 
 // view engine setup
@@ -37,5 +37,13 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+
+//mongoDB 연결
+mongoose.Promise = global.Promise
+mongoose.connect(config.mongodbUri,{useNewUrlParser:true, useCreateIndex: true})
+.then(()=>console.log('connected to mongodb server'))
+.catch(e=> console.error(e))
+
 
 module.exports = app;
