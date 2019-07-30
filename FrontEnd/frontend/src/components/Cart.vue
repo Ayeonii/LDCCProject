@@ -10,15 +10,9 @@
                 <td class="table-td">수량</td>
                 <td class="table-td"></td>
             </tr>
-<<<<<<< HEAD
             <tr v-for= "val in listData" >
                 <!-- <td>{{val.id}}</td> -->
                 <td><img v-bind:src= "val.img" > </td>
-=======
-            <tr v-for="val in this.listData"  >
-                <td>{{val.id}}</td>
-                <td>{{val.img}}</td>
->>>>>>> 540938a7ac6e154923906d37443018926b903c5b
                 <td>{{val.name}}</td>
                 <td>{{val.amount}}</td>
                 <td class="table-td">&nbsp;&nbsp;<v-btn class ="tb-btn" @click= "removeFood(val.id)" >삭제</v-btn></td>
