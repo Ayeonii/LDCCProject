@@ -49,13 +49,10 @@ router.post('/complete', function (req, res, next) {
     const customer = req.body.customer //카드결제고객 이름
     var totalprice = 0
     var totalfoodArr = new Array();
-   
-    //JSON.stringify(req.body.totalfood)
-    console.log(customer, totalprice)
-    
+
     for(var i = 0; i < size; i++){
         var totalfoodObj = new Object();
-        
+
         var fp =  parseInt(req.body.totalfood[i].foodprice)
         var fa =  parseInt(req.body.totalfood[i].foodamount)
         var foodttprice =  fp * fa
@@ -69,12 +66,6 @@ router.post('/complete', function (req, res, next) {
         totalprice += foodttprice
     
     }
-
-    for(var i =0 ; i <size; i++){
-        console.log("전체 데이터" + totalfoodArr[i].foodname);
-    }
-
-
 
     //결제내역 추가.
     const create = () => {
