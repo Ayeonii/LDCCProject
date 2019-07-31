@@ -6,11 +6,7 @@
     <br />
     <br />
     <h2>&nbsp;&nbsp;&nbsp;&nbsp; 장바구니</h2>
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
+    <br />    <br />    <br />   <br /> <br />
     <table class="cart-table">
       <tr class="tr-name">
         <!-- <td class="table-td">No.</td> -->  
