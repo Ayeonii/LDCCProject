@@ -53,9 +53,22 @@ router.get('/getAll', function (req, res, next) {
   
 */
 router.post('/complete', function (req, res, next) {
+   
+    //NFC 결제 동작 시작
+    const SerialPort = require('serialport')
+    const Readline = SerialPort.parsers.Readline
+    const port = new SerialPort("COM3", {
+        baudRate:9600
+    
+    }, false);
+    const parser = new Readline()
+    port.pipe(parser)
+    parser.on('data', console.log)
+
+
     console.log('SYSTEM: 결제완료')
     const size = req.body.totalfood.length;
-    const customer = req.body.customer //카드결제고객 이름
+    const customer = parser //카드결제고객 이름
     var totalprice = 0
     var totalfoodArr = new Array();
 
