@@ -9,21 +9,21 @@
       </v-flex>
 
       <v-flex mb-4>
-
+<!-- 
         <div v-bind:style="{ 'background-color': 'red' }">
           <img style="width: 100px; height: 100px;" src="../assets/tgif_logo.png" alt="">
-        </div>
+        </div> -->
         <div>
           <img id="order" style="width: 50px; height: 50px;" @click="order" src="../assets/order.png" alt=""><p>{{ count }}</p>
-          <img id="reset" style="width: 50px; height: 50px;" @click="reset" src="../assets/reset.png" alt=""></img>
+          <img id="reset" style="width: 50px; height: 50px;" @click="reset" src="../assets/reset.png" alt="">
         </div>
         
         <slick ref="slick" :options="slickOptions">
-          <a><img style="width: 200px; height: 200px;" @click="counter_1" src="../assets/steak.jpeg" alt=""></img></a>
-          <a><img style="width: 200px; height: 200px;" @click="counter_2" src="../assets/steak.jpeg" alt=""></img></a>
-          <a><img style="width: 200px; height: 200px;" @click="counter_3" src="../assets/steak.jpeg" alt=""></img></a>
-          <a><img style="width: 200px; height: 200px;" @click="counter_4" src="../assets/steak.jpeg" alt=""></img></a>
-          <a><img style="width: 200px; height: 00px;"  @click="counter_5"  src="../assets/steak.jpeg" alt=""></img></a>
+          <a><img style="width: 200px; height: 200px;" @click="counter_1" src="../assets/steak.jpeg" alt=""></a>
+          <a><img style="width: 200px; height: 200px;" @click="counter_2" src="../assets/steak.jpeg" alt=""></a>
+          <a><img style="width: 200px; height: 200px;" @click="counter_3" src="../assets/steak.jpeg" alt=""></a>
+          <a><img style="width: 200px; height: 200px;" @click="counter_4" src="../assets/steak.jpeg" alt=""></a>
+          <a><img style="width: 200px; height: 00px;"  @click="counter_5"  src="../assets/steak.jpeg" alt=""></a>
         </slick>
       
          <div v-bind:style="{ 'background-color': 'red' }">

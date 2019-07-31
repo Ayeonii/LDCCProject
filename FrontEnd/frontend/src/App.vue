@@ -10,11 +10,13 @@
 
 <script>
 import HelloWorld from './components/HelloWorld';
-
+import HomeView from './views/HomeView';
+import TopNav from './components/topNavBar'
 export default {
   name: 'App',
   components: {
-    HelloWorld,
+    TopNav,
+    HomeView,
   },
   data: () => ({
     //
