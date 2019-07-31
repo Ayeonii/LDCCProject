@@ -2,10 +2,19 @@ var express = require('express');
 var router = express.Router();
 var Payment = require('../models/payment');
 
+const Nfc = require('../NFC_serial')
 router.use(function (req, res, next) {
     next();
 });
 
+
+router.get('/paymentOk',(req,res,next)=>{
+    //
+    var nfcData = Nfc;
+    console.log("!@#$%^&*(IO)",nfcData);
+    
+
+})
 
 
 
