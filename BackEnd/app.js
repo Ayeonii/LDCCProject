@@ -13,6 +13,24 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
+// nfc
+// var SerialPort = require("serialport");
+// var temp;
+// var serialPort = new SerialPort("COM3", {
+//     baudRate:9600
+
+// }, false);
+
+
+// serialPort.open(function (){
+//     console.log('connected');
+//         serialPort.on('data', function(data){
+//         console.log('data received:' + data);
+//         temp=data;
+//         });
+// });
+// console.log(temp,"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+
 
 app.use(logger('dev'));
 app.use(express.json());
