@@ -88,8 +88,8 @@
         </slick>
 
          <!-- <div v-bind:style="{ 'background-color': 'red' }">
-           <p> 선택 메뉴 :  요리1 ({{ count_1 }}) 개수 요리2 ({{ count_2 }}) 개수 요리3 ({{ count_3 }}) 개수
-           요리4 ({{ count_4 }}) 개수 요리5 ({{ count_5 }}) 개수</p>
+           <p> 선택 메뉴 :  요리1 ({{ steak[0] }}) 개수 요리2 ({{ steak[1] }}) 개수 요리3 ({{ steak[2] }}) 개수
+           요리4 ({{ steak[3] }}) 개수 요리5 ({{ steak[4] }}) 개수</p>
          </div> -->
       </v-flex>
 
@@ -109,10 +109,18 @@
     data() {
         return {
             count: 0,
-            count_1_1: 0,count_1_2: 0,count_1_3: 0,count_1_4: 0,count_1_5: 0,
-            count_2_1: 0,count_2_2: 0,count_2_3: 0,count_2_4: 0,count_2_5: 0,
-            count_3_1: 0,count_3_2: 0,count_3_3: 0,count_3_4: 0,
-            count_4_1: 0,count_4_2: 0,
+            steak :[0,0,0,0,0],
+            steak_name :["시그니처스테이크쉬림프", "뉴욕스트립스테이크", "엠파이어스테이크with본인립아이", "시그니처글레이즈드립", "시그니처립쉬림프"],
+            steak_price :[40000, 35000, 65000, 37000, 43500],
+            pasta :[0,0,0,0],
+            pasta_name :["쉐차안쉬림프파스타", "케이준쉬림프치킨파스타", "크리미버팔로치킨파스타", "씨푸트마리나라"],
+            pasta_price :[21000, 19500, 65000, 17000, 20500],
+            salad :[0,0,0,0],
+            salad_name :["스테이크샐러드", "깔립소깔라마리샐러드", "상하이치킨샐러드", "케이준후라이드치킨샐러드"],
+            salad_price :[17000, 19500, 65000, 18500, 21500],
+            dessert : [0,0],
+            dessert_name :["아이스크림또는셔벗","더블브라우니옵세션"],
+            dessert_price :[6300, 7200],
             slickOptions: {
                 slidesToShow: 3,
                 // Any other options that can be got from plugin documentation
@@ -139,100 +147,152 @@
         },
         reset: function () {
           this.count = 0;
-          this.count_1_1 = 0;
-          this.count_1_2 = 0;
-          this.count_1_3 = 0;
-          this.count_1_4 = 0;
-          this.count_1_5 = 0;
-          this.count_2_1 = 0;
-          this.count_2_2 = 0;
-          this.count_2_3 = 0;
-          this.count_2_4 = 0;
-          this.count_2_5 = 0;
-          this.count_3_1 = 0;
-          this.count_3_2 = 0;
-          this.count_3_3 = 0;
-          this.count_3_4 = 0;
-          this.count_4_1 = 0;
-          this.count_4_2 = 0;
+          this.steak[0] = 0;
+          this.steak[1] = 0;
+          this.steak[2] = 0;
+          this.steak[3] = 0;
+          this.steak[4] = 0;
+          this.pasta[0] = 0;
+          this.pasta[1] = 0;
+          this.pasta[2] = 0;
+          this.pasta[3] = 0;
+          this.salad[0] = 0;
+          this.salad[1] = 0;
+          this.salad[2] = 0;
+          this.salad[3] = 0;
+          this.dessert[0] = 0;
+          this.dessert[1] = 0;
         },
         counter: function () {
           this.count++;
         },
         counter_1_1: function () {
-          this.count_1_1++;
+          this.steak[0]++;
           this.count++;
         },
         counter_1_2: function () {
-          this.count_1_2++;
+          this.steak[1]++;
           this.count++;
         },
         counter_1_3: function () {
-          this.count_1_3++;
+          this.steak[2]++;
           this.count++;
         },
         counter_1_4: function () {
-          this.count_1_4++;
+          this.steak[3]++;
           this.count++;
         },
         counter_1_5: function () {
-          this.count_1_5++;
+          this.steak[4]++;
           this.count++;
         },
         counter_2_1: function () {
-          this.count_2_1++;
+          this.pasta[0]++;
           this.count++;
         },
         counter_2_2: function () {
-          this.count_2_2++;
+          this.pasta[1]++;
           this.count++;
         },
         counter_2_3: function () {
-          this.count_2_3++;
+          this.pasta[2]++;
           this.count++;
         },
         counter_2_4: function () {
-          this.count_2_4++;
-          this.count++;
-        },
-        counter_2_5: function () {
-          this.count_2_5++;
+          this.pasta[3]++;
           this.count++;
         },
         counter_3_1: function () {
-          this.count_3_1++;
+          this.salad[0]++;
           this.count++;
         },
         counter_3_2: function () {
-          this.count_3_2++;
+          this.salad[1]++;
           this.count++;
         },
         counter_3_3: function () {
-          this.count_3_3++;
+          this.salad[2]++;
           this.count++;
         },
         counter_3_4: function () {
-          this.count_3_4++;
+          this.salad[3]++;
           this.count++;
         },
         counter_4_1: function () {
-          this.count_4_1++;
+          this.dessert[0]++;
           this.count++;
         },
         counter_4_2: function () {
-          this.count_4_2++;
+          this.dessert[1]++;
           this.count++;
         },
         order: function () {
-          this.$router.push({ name: 'cart', 
-            params: [
-              {food_name: '' ,amount: 1},
-              {food_name: '' ,amount: 2},
-              {food_name: '' ,amount: 3},
-              {food_name: '' ,amount: 4},
-              {food_name: '' ,amount: 5}
-            ]
-          })
+          var params = [];
+
+          for (var i = 0; i < 5; i += 1) 
+          {
+            if(this.steak[i] > 0) 
+            {
+              // params+=
+              params.push(
+
+                {
+                  name: this.steak_name[i],
+                  price: this.steak_price[i],
+                  amount: this.steak[i]
+                }
+                );
+            }
+          }
+
+           for (var i = 0; i < 4; i += 1) 
+          {
+            if(this.pasta[i] > 0) 
+            {
+              // params+=
+              params.push(
+
+                {
+                  name: this.pasta_name[i],
+                  price: this.pasta_price[i],
+                  amount: this.pasta[i]
+                }
+                );
+
+            }
+          }
+
+           for (var i = 0; i < 4; i += 1) 
+          {
+            if(this.salad[i] > 0) 
+            {
+              // params+=
+              params.push(
+
+                {
+                  name: this.salad_name[i],
+                  price: this.salad_price[i],
+                  amount: this.salad[i]
+                }
+                );
+            }
+          }
+
+           for (var i = 0; i < 2; i += 1) 
+          {
+            if(this.dessert[i] > 0) 
+            {
+              params.push(
+                {
+                  name: this.dessert_name[i],
+                  price: this.dessert_price[i],
+                  amount: this.dessert[i]
+                }
+                );
+            }
+          }
+              console.log(params);
+          this.$router.push({ name: 'cart', params})
         }
     },
 }
