@@ -13,6 +13,7 @@
         <td class="table-td">사진</td>
         <td class="table-td">이름</td>
         <td class="table-td">수량</td>
+        <td class="table-td">가격</td>
         <td class="table-td"></td>
       </tr>
       <tr v-for="val in listData">
@@ -20,8 +21,9 @@
         <td>
           <img v-bind:src="val.img" />
         </td>
-        <td>{{val.name}}</td>
-        <td>{{val.amount}}</td>
+        <td>{{val.foodname}}</td>
+        <td>{{val.foodamount}}</td>
+        <td>{{val.foodprice}}</td>
         <td class="table-td">
           &nbsp;&nbsp;
           <v-btn class="tb-btn" @click="removeFood(val.id)">삭제</v-btn>
@@ -45,32 +47,36 @@ export default {
     return {
       listData: [
         {
-          id: 1,
-          img:
+          "id": 1,
+          "img":
             "https://st2.depositphotos.com/5045705/11671/v/950/depositphotos_116714982-stock-illustration-little-puppy-icon.jpg",
-          name: "바질 파스타",
-          amount: 1
+          "foodname": "바질 파스타",
+          "foodprice": 21000,
+          "foodamount": 1
         },
         {
-          id: 2,
-          img:
+          "id": 2,
+          "img":
             "https://previews.123rf.com/images/jehsomwang/jehsomwang1304/jehsomwang130400289/19191815-%EA%B0%9C-%EC%95%84%EC%9D%B4%EC%BD%98.jpg",
-          name: "양갈비 스테이크",
-          amount: 2
+          "foodname": "양갈비 스테이크",
+          "foodprice": 42000,
+          "foodamount": 2
         },
         {
-          id: 3,
-          img:
+          "id": 3,
+          "img":
             "https://st3.depositphotos.com/5307436/19291/v/1600/depositphotos_192916630-stock-illustration-puppy-doodle-sketch.jpg",
-          name: "폭립",
-          amount: 1
+          "foodname": "폭립",
+          "foodprice": 35000,
+          "foodamount": 1
         },
         {
-          id: 4,
-          img:
+          "id": 4,
+          "img":
             "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7H_8r1EGr-VDMI4wsFbgfZm-AwucrqhJAHuiJsEKGxcktW1AA",
-          name: "콜라",
-          amount: 2
+          "foodname": "콜라",
+          "foodprice": 6000,
+          "foodamount": 2
         }
       ]
     };
@@ -84,14 +90,15 @@ export default {
       nfcpay: function() {
         //todo
         // post to backend server "nfc"
-         axios.post(`52.79.233.248:3000/api/payment`,ListData)
+         axios.post("http://52.79.233.248:3000/api/payment/complete",this.listData)
         .then(res => {
             // if (res.data.status) 
             console.log(res)
             // resolve(true)
           // }
         })
-        .catch(e => { // 500 error
+        .catch(e => { // 500 error  
+        console.log(this.ListData)
           console.log(e)
           // resolve(false)
         })

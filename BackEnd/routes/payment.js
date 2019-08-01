@@ -64,24 +64,27 @@ router.post('/complete', function (req, res, next) {
     const parser = new Readline()
     port.pipe(parser)
     parser.on('data', console.log)
-
+    console.log(parser)
 
     console.log('SYSTEM: 결제완료')
-    const size = req.body.totalfood.length;
-    const customer = parser //카드결제고객 이름
+    // console.log(req.body)
+    const Lsize = req.body.listData.length;
+    // const customer = parser //카드결제고객 이름
+    const customer = "kyoung in" //카드결제고객 이름
     var totalprice = 0
     var totalfoodArr = new Array();
-
-    for(var i = 0; i < size; i++){
+    var totalfood=req.body.listData;
+    for(var i = 0; i < Lsize; i++){
         var totalfoodObj = new Object();
 
-        var fp =  parseInt(req.body.totalfood[i].foodprice)
-        var fa =  parseInt(req.body.totalfood[i].foodamount)
+        var fp =  parseInt(totalfood[i].foodprice)
+        console.log()
+        var fa =  parseInt(totalfood[i].foodamount)
         var foodttprice =  fp * fa
   
-        totalfoodObj.foodname = req.body.totalfood[i].foodname,
-        totalfoodObj.foodprice = req.body.totalfood[i].foodprice,
-        totalfoodObj.foodamount =req.body.totalfood[i].foodamount,
+        totalfoodObj.foodname = totalfood[i].foodname,
+        totalfoodObj.foodprice = totalfood[i].foodprice,   
+        totalfoodObj.foodamount =totalfood[i].foodamount,
         totalfoodObj.foodtotalprice = foodttprice
 
         totalfoodArr.push(totalfoodObj);
