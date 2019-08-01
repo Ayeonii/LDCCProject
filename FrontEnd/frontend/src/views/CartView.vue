@@ -31,8 +31,8 @@
     </table>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <div class="pay-bnt">
-      <v-btn @click="nfcpay">nfc결제</v-btn>&nbsp;&nbsp;&nbsp;&nbsp;
-      <v-btn @click="localpay">현장결제</v-btn>
+      <v-btn class="pb" @click="nfcpay">nfc결제</v-btn>&nbsp;&nbsp;&nbsp;&nbsp;
+      <v-btn class="pb" @click="localpay">현장결제</v-btn>
     </div>
   </div>
 </template>
@@ -97,7 +97,12 @@ export default {
 </script>
 
 <style lang="scss">
+.pb{
 
+  color: #FFEBEE !important;
+  background: #F4511E !important;
+
+}
 .pay-bnt {
     padding: 15px;
     margin: 32vw;
@@ -107,8 +112,8 @@ img {
   width: 8vw;
 }
 .tb-btn {
-  color: #e65100 !important;
-  background: #ffe0b2 !important;
+  color: #FFEBEE !important;
+  background: #F4511E !important;
   width: 8vw;
 }
 .btn {
@@ -119,17 +124,17 @@ img {
 }
 .cart {
   table {
-    border-top: 10px solid #fb8c00;
+    border-top: 10px solid #E53935;
     margin: 0 auto;
     width: 80vw;
     border-collapse: collapse;
     .tr-name {
-      background: #fff3e0;
+      background: #FFCDD2;
     }
   }
   td {
     // border-bottom: 1px solid #efb1b1;
-    border: 1px solid #fb8c00;
+    border: 1px solid #E53935;
     padding: 15px;
   }
   tr {

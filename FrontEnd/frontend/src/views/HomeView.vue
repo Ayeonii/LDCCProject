@@ -14,10 +14,9 @@
           <img style="width: 100px; height: 100px;" src="../assets/tgif_logo.png" alt="">
         </div> -->
         <div>
-          <img id="order" style="width: 50px; height: 50px;" @click="order" src="../assets/order.png" alt=""><p>{{ count }}</p>
+          <img id="order" style="width: 50px; height: 50px;" @click="order" src="../assets/order.png" alt=""><p>{{ count }}</p> 
           <img id="reset" style="width: 50px; height: 50px;" @click="reset" src="../assets/reset.png" alt="">
         </div>
-        
         <slick ref="slick" :options="slickOptions">
           <a><img style="width: 200px; height: 200px;" @click="counter_1" src="../assets/steak.jpeg" alt=""></a>
           <a><img style="width: 200px; height: 200px;" @click="counter_2" src="../assets/steak.jpeg" alt=""></a>

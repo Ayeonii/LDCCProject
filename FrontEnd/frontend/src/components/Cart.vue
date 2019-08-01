@@ -107,7 +107,7 @@ img {
   width: 8vw;
 }
 .tb-btn {
-  color: #e65100 !important;
+  color: #F44336 !important;
   background: #ffe0b2 !important;
   width: 8vw;
 }
@@ -119,7 +119,7 @@ img {
 }
 .cart {
   table {
-    border-top: 10px solid #fb8c00;
+    border-top: 10px solid #E53935;
     margin: 0 auto;
     width: 80vw;
     border-collapse: collapse;
@@ -129,7 +129,7 @@ img {
   }
   td {
     // border-bottom: 1px solid #efb1b1;
-    border: 1px solid #fb8c00;
+    border: 1px solid #F44336;
     padding: 15px;
   }
   tr {
