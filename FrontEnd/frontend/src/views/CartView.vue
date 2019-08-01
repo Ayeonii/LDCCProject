@@ -38,6 +38,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 // import CartModel from "../models/CartModel.js"
 export default {
   data() {
@@ -83,7 +84,19 @@ export default {
       nfcpay: function() {
         //todo
         // post to backend server "nfc"
-        this.$router.push("/about");
+         axios.post(`52.79.233.248:3000/api/payment`,ListData)
+        .then(res => {
+            // if (res.data.status) 
+            console.log(res)
+            // resolve(true)
+          // }
+        })
+        .catch(e => { // 500 error
+          console.log(e)
+          // resolve(false)
+        })
+    // })
+        // this.$router.push("/about");
       },
       localpay: function() {
         //todo
