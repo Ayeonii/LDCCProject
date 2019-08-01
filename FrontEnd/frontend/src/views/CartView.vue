@@ -3,6 +3,10 @@
     <span>
       <v-btn text><a href= "/" >뒤로가기</a> </v-btn>
     </span>
+    <div>
+
+
+    </div>
     <br />
     <br />
     <h2>&nbsp;&nbsp;&nbsp;&nbsp; 장바구니</h2>
@@ -35,6 +39,15 @@
     <div class="pay-bnt">
       <v-btn class="pb" @click="nfcpay">nfc결제</v-btn>&nbsp;&nbsp;&nbsp;&nbsp;
       <v-btn class="pb" @click="localpay">현장결제</v-btn>
+      <br><br>
+      <v-alert type="success" v-if="this.flag==1">
+      이아연님 !
+       결제가 완료되었어요!
+    </v-alert>
+    <v-alert type="error" v-else-if="this.flag==2">
+      이아연님 !
+       결제가 실패하였어요.....
+    </v-alert>
     </div>
   </div>
 </template>
@@ -45,38 +58,39 @@ import axios from 'axios'
 export default {
   data() {
     return {
+      flag:0,
       listData: [
         {
           "id": 1,
           "img":
-            "https://st2.depositphotos.com/5045705/11671/v/950/depositphotos_116714982-stock-illustration-little-puppy-icon.jpg",
-          "foodname": "바질 파스타",
-          "foodprice": 21000,
-          "foodamount": 1
+            "https://postfiles.pstatic.net/MjAxOTA4MDFfMTIy/MDAxNTY0NjM0Njk3MzE3.bMeLlLCu2xU7WD34Z35mmfZ8FeT1IJSkSdQFa3YQUcog.oyr20X8mWQw1Kg9aoNtbL7Kt2_tWoEEgu9JjBeLAO0Ag.PNG.momoqqq311/케이준쉬림프치킨파스타.PNG?type=w773",
+          "foodname": "케이준쉬림프치킨파스타",
+          "foodprice": 39000,
+          "foodamount": 2
         },
         {
           "id": 2,
           "img":
-            "https://previews.123rf.com/images/jehsomwang/jehsomwang1304/jehsomwang130400289/19191815-%EA%B0%9C-%EC%95%84%EC%9D%B4%EC%BD%98.jpg",
-          "foodname": "양갈비 스테이크",
-          "foodprice": 42000,
-          "foodamount": 2
+            "https://mblogthumb-phinf.pstatic.net/MjAxOTA4MDFfMTk2/MDAxNTY0NjM0MDg5MTQ2.ZvEJVkhsOG1L8q3pvNeg8R0aSVy40sVS2kuYwzaUYyYg.YoElor7Imrh3x8kqsje709imIqqH_Oe0zskyn41wNbEg.PNG.momoqqq311/뉴욕스트립스페이크.PNG?type=w800",
+          "foodname": "뉴욕스트립스테이크",
+          "foodprice": 35000,
+          "foodamount": 1
         },
         {
           "id": 3,
           "img":
-            "https://st3.depositphotos.com/5307436/19291/v/1600/depositphotos_192916630-stock-illustration-puppy-doodle-sketch.jpg",
-          "foodname": "폭립",
-          "foodprice": 35000,
+            "https://postfiles.pstatic.net/MjAxOTA4MDFfNDAg/MDAxNTY0NjM1MTQ0ODg1._-FjR0HKKS4dFCQ-Ka8nkzg-J5EkAc24cN0h8HxfSNEg.LcKTLy5MU1ofm8H4oP2hL8blMdgqqf8RceZq60xKin0g.PNG.momoqqq311/상하이치킨샐러드.PNG?type=w773",
+          "foodname": "상하이치킨샐러드",
+          "foodprice": 18500,
           "foodamount": 1
         },
         {
           "id": 4,
           "img":
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7H_8r1EGr-VDMI4wsFbgfZm-AwucrqhJAHuiJsEKGxcktW1AA",
-          "foodname": "콜라",
-          "foodprice": 6000,
-          "foodamount": 2
+            "https://postfiles.pstatic.net/MjAxOTA4MDFfMTMz/MDAxNTY0NjM1Mjk1NzU0.eLozryTy82UG3-j9PzwB1fXjXHFqzE_Es5WIIE8OSc4g.c3DlpAKSHIiYLU5TOQvSzBuUa9fuQe1AafR8GTDlOD0g.PNG.momoqqq311/아이스크림또는셔벗.PNG?type=w773",
+          "foodname": "아이스크림 또는 셔벗",
+          "foodprice": 6300,
+          "foodamount": 1
         }
       ]
     };
@@ -88,20 +102,23 @@ export default {
       this.listData = this.listData.filter(item => item.id !== id);
     },
       nfcpay: function() {
-        //todo
-        // post to backend server "nfc"
-         axios.post("http://52.79.233.248:3000/api/payment/complete",this.listData)
-        .then(res => {
-            // if (res.data.status) 
-            console.log(res)
-            // resolve(true)
-          // }
-        })
-        .catch(e => { // 500 error  
-        console.log(this.ListData)
-          console.log(e)
-          // resolve(false)
-        })
+        // //todo
+        // // post to backend server "nfc"
+        //  axios.post("http://52.79.233.248:3000/api/payment/complete",this.listData)
+        // .then(res => {
+        //     // if (res.data.status) 
+        //     console.log(res)
+        //     // resolve(true)
+        //   // }
+        // })
+        // .catch(e => { // 500 error  
+        // console.log(this.ListData)
+        //   console.log(e)
+        //   // resolve(false)
+        // })
+        this.flag=1;
+      // alert("이아연 님 결제가 완료되었습니다.")
+
     // })
         // this.$router.push("/about");
       },
