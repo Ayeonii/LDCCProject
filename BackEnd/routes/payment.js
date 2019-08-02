@@ -1,23 +1,17 @@
+
 var express = require('express');
 var router = express.Router();
 var Payment = require('../models/payment');
+var SerialPort = require('serialport')
+var Readline = SerialPort.parsers.Readline
+var port = new SerialPort('/dev/ttyACM2', {
+    autoOpen: true,
+    baudRate:9600
+}, false);
 
-const Nfc = require('../NFC_serial')
-router.use(function (req, res, next) {
-    next();
-});
-
-
-router.get('/paymentOk',(req,res,next)=>{
-    //
-    var nfcData = Nfc;
-    console.log("!@#$%^&*(IO)",nfcData);
-    
-
+port.once('open',function(){
+    console.log('Open Serialport')
 })
-
-
-
 
 
 /*
@@ -40,8 +34,7 @@ router.get('/getAll', function (req, res, next) {
 
   JSON 형식
     {
-        customer :
-        totalfood: 
+        listData:
         [
             {
                 foodname :
@@ -50,75 +43,84 @@ router.get('/getAll', function (req, res, next) {
             }
         ]
     }
-  
+
 */
-router.post('/complete', function (req, res, next) {
-   
-    //NFC 결제 동작 시작
-    const SerialPort = require('serialport')
-    const Readline = SerialPort.parsers.Readline
-    const port = new SerialPort("COM3", {
-        baudRate:9600
-    
-    }, false);
-    const parser = new Readline()
+
+
+ router.post('/complete', function (req, res, next) {
+   console.log("NFC결제 시작")
+   console.log(req.body)
+
+    var parser = new Readline()
     port.pipe(parser)
-    parser.on('data', console.log)
-    console.log(parser)
-
-    console.log('SYSTEM: 결제완료')
-    // console.log(req.body)
-    const Lsize = req.body.listData.length;
-    // const customer = parser //카드결제고객 이름
-    const customer = "kyoung in" //카드결제고객 이름
-    var totalprice = 0
-    var totalfoodArr = new Array();
-    var totalfood=req.body.listData;
-    for(var i = 0; i < Lsize; i++){
-        var totalfoodObj = new Object();
-
-        var fp =  parseInt(totalfood[i].foodprice)
-        console.log()
-        var fa =  parseInt(totalfood[i].foodamount)
-        var foodttprice =  fp * fa
-  
-        totalfoodObj.foodname = totalfood[i].foodname,
-        totalfoodObj.foodprice = totalfood[i].foodprice,   
-        totalfoodObj.foodamount =totalfood[i].foodamount,
-        totalfoodObj.foodtotalprice = foodttprice
-
-        totalfoodArr.push(totalfoodObj);
-        totalprice += foodttprice
+    parser.on('data',function(data){
     
-    }
+        var tmp = data + "";
+        var customerlength = tmp.length;
+        var customer = tmp.substring(1,customerlength-1);
+        var customerko;
+        var size = req.body.listData.length;
+        console.log(req.body.listData.length,"!!!!!!!!!!!!!!!!!!!")
 
-    //결제내역 추가.
-    const create = () => {
-            return Payment.create(
-              customer,
-              totalfoodArr,
-              totalprice,
-            )
-    }
-  
-    const respond = () => {
-        console.log('SYSTEM: 메뉴 결제 완료')
-        res.json({
-            message: '결제가 완료되었습니다.',
-        })
-    }
-  
-    const onError = (error) => {
-        console.log('SYSTEM: ' + error)
-        res.status(203).json({ 
-            message: error.message
-        })
-    }
-  
-    Payment.find()
-        .then(create)
-        .then(respond)
-        .catch(onError)
-  });
-  
+        //  console.log("length : " + size)
+        var totalprice = 0
+        var totalfoodArr = new Array();
+
+        console.log("---------"+customer)
+        if(customer == "KyungIn"){
+            customerko = "정경인"
+        }else if(customer == "MinWoong"){
+            customerko = "강민웅"
+        }else if(customer == "JinSik"){
+            customerko = "이진식"
+        }
+        
+         for(var i = 0; i < size; i++){
+             var totalfoodObj = new Object();
+             var fp =  parseInt(req.body.listData[i].foodprice)
+             var fa =  parseInt(req.body.listData[i].foodamount)
+             var foodttprice =  fp * fa
+             totalfoodObj.foodname = req.body.listData[i].foodname,
+             totalfoodObj.foodprice = req.body.listData[i].foodprice,
+             totalfoodObj.foodamount =req.body.listData[i].foodamount,
+             console.log("totalfoodname" + totalfoodObj.foodname)
+             totalfoodObj.foodtotalprice = foodttprice
+             totalfoodArr.push(totalfoodObj);
+             totalprice += foodttprice
+         }
+         //결제내역 추가.
+         const create = () => {
+                 return Payment.create(
+                   customerko,
+                   totalfoodArr,
+                   totalprice,
+                 )
+         }
+         const respond = () => {
+             console.log('SYSTEM: 메뉴 결제 완료')
+             console.log("total"+ totalprice)
+             res.json({
+                 customername: customerko,
+                 totalprice : totalprice
+             })
+         }
+         const onError = (error) => {
+             console.log('SYSTEM: ' + error)
+             res.status(203).json({
+                 message: error.message
+             })
+         }
+         if(customer.length >1){
+            Payment.find()
+            .then(create)
+            .then(respond)
+            .catch(onError)
+         }
+    });
+
+
+});
+
+
+
   module.exports = router;

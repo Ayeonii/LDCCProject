@@ -15,7 +15,7 @@
         <td class="table-td">수량</td>
         <td class="table-td"></td>
       </tr>
-      <tr v-for="val in listData">
+      <tr v-for="val in listData" v-bind:key ="val.id">
         <!-- <td>{{val.id}}</td> -->
         <td>
           <img v-bind:src="val.img" />
@@ -80,18 +80,37 @@ export default {
       // this.listData = this.listData.filter(item=>{item.food !==food ; console.log(item.food)})
       this.listData = this.listData.filter(item => item.id !== id);
     },
-      nfcpay: function() {
-        //todo
-        // post to backend server "nfc"
-        this.$router.push("/about");
-      },
-      localpay: function() {
-        //todo
-        // post to backend server "nfc"
-        alert("주문 완료! ")
-        this.$router.push("/");
+      // nfcpay: function() {
+      //   //todo
+      //   // post to backend server "nfc"
+      //   //this.$router.push("/about");
+      //     axios.post('/api/payment/complete', {
+      //       totalfood:[
+      //         {
+      //           foodname: "",
+      //           foodprice:"",
+      //           foodamount:""
+      //         }
+      //       ]
+      //   })
+      //   .then(res => {
+      //     const status = res.status
+      //     if (status === 200) {
+      //       this.$router.push('/about')
+      //     } 
+      //   })
+      //   .catch(err => {
+      //     console.log(err)
+      //     alert(err)
+      //   })
+      // },
+      // localpay: function() {
+      //   //todo
+      //   // post to backend server "nfc"
+      //   alert("주문 완료! ")
+      //   this.$router.push("/");
 
-      }
+      // }
   }
 };
 </script>

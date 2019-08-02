@@ -1,5 +1,5 @@
 var SerialPort = require("serialport");
-var serialPort = new SerialPort("COM3", {
+var serialPort = new SerialPort("/dev/ttyACM0", {
     baudRate:9600
 
 }, false);

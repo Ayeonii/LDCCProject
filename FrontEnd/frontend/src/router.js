@@ -4,6 +4,7 @@ import HomeView from './views/HomeView.vue'
 import CartView from './views/CartView.vue'
 import PaymentView from './views/PaymentView.vue'
 
+
 Vue.use(Router)
 
 export default new Router({

@@ -10,7 +10,7 @@
         <td class="table-td">삭제</td>
       </tr>
 
-      <tr v-for="val in this.listData" >
+      <tr v-for="val in this.listData" v-bind:key = "val.id" >
         <td>{{val.id}}</td>
         <td>{{val.img}}</td>
         <td>{{val.name}}</td>

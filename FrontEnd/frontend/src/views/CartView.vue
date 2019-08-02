@@ -21,7 +21,7 @@
         <td class="table-td">가격</td>
         <td class="table-td"></td>
       </tr>
-      <tr v-for="val in listData">
+      <tr v-for="val in listData" v-bind:key="val.id">
         <!-- <td>{{val.id}}</td> -->
         <td>
           <img v-bind:src="val.img" />
@@ -39,16 +39,31 @@
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <div class="pay-bnt">
       <v-btn class="pb" @click="nfcpay">nfc결제</v-btn>&nbsp;&nbsp;&nbsp;&nbsp;
-      <v-btn class="pb" @click="localpay">현장결제</v-btn>
+      <v-btn class="pb" @click="snackbar = true">현장결제</v-btn>
       <br><br>
       <v-alert type="success" v-if="this.flag==1">
-      이아연님 !
-       결제가 완료되었어요!
+       {{this.customername}}님 !
+       {{this.totalprice}}원 결제가 완료되었어요!
     </v-alert>
     <v-alert type="error" v-else-if="this.flag==2">
-      이아연님 !
+       {{this.customername}}님 !
        결제가 실패하였어요.....
     </v-alert>
+    <v-alert type="error" v-else-if="this.flag==3">
+      주문완료!
+    </v-alert>
+    <v-snackbar
+        v-model="snackbar"
+      >
+        {{ text }}
+        <v-btn
+          color="pink"
+          text
+          @click="snackbar = false"
+        >
+          Close
+        </v-btn>
+      </v-snackbar>
     </div>
   </div>
 </template>
@@ -60,6 +75,8 @@ export default {
   data() {
     return {
       flag:0,
+      customername : "",
+      totalprice : "",
       listData: [
         {
           "id": 1,
@@ -93,10 +110,14 @@ export default {
           "foodprice": 6300,
           "foodamount": 1
         }
-      ]
+      ],
+      snackbar: false,
+      text: '주문완료!',
+      vertical: true,
     };
   },
   methods: {
+
     removeFood(id) {
       //   console.log(food)
       // this.listData = this.listData.filter(item=>{item.food !==food ; console.log(item.food)})
@@ -105,19 +126,23 @@ export default {
       nfcpay: function() {
         // //todo
         // // post to backend server "nfc"
-        //  axios.post("http://52.79.233.248:3000/api/payment/complete",this.listData)
-        // .then(res => {
-        //     // if (res.data.status) 
-        //     console.log(res)
-        //     // resolve(true)
-        //   // }
-        // })
-        // .catch(e => { // 500 error  
-        // console.log(this.ListData)
-        //   console.log(e)
-        //   // resolve(false)
-        // })
-        this.flag=1;
+          this.$http.post("/api/payment/complete",
+              {listData : this.listData}
+              )
+         .then(res => {
+             console.log(res)
+             this.flag = 1;
+             this.customername = res.data.customername;
+             this.totalprice = res.data.totalprice;
+           // }
+         })
+         .catch(e => { // 500 error  
+         console.log(this.listData)
+           console.log(e)
+           // resolve(false)
+         })
+        // this.flag=1;
+        // this.$router.push("/");
       // alert("이아연 님 결제가 완료되었습니다.")
 
     // })
@@ -126,7 +151,7 @@ export default {
       localpay: function() {
         //todo
         // post to backend server "nfc"
-        alert("주문 완료! ")
+        // alert("주문 완료! ");
         this.$router.push("/");
 
       }
