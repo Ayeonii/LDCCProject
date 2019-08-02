@@ -12,7 +12,7 @@
     <v-toolbar-items>
       <v-btn text>TGIF HOME</v-btn>
       <v-btn text>MENU</v-btn>
-      <v-btn text>CART</v-btn>
+      <v-btn text>FAVORITE</v-btn>
     </v-toolbar-items>
 
   </v-toolbar>

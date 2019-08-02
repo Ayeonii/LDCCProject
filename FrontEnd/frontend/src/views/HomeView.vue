@@ -15,13 +15,14 @@
         </div> -->
     <v-spacer></v-spacer>
 
-
-        <div class="text-auto">
-          <v-badge>
+        <br>
+        <div class="text-right" >
+          <v-badge  >
             <template v-slot:badge>{{ count }}</template>
-            <v-icon>cart</v-icon>
+            <v-icon  @click="order" style=" borderRadius:100px; padding : 10px ;border: 0px solid ; background : #FFEBEE;" >cart &nbsp; &nbsp; </v-icon>
           </v-badge>
         </div>  
+        <br>
       <!-- <v-toolbar-items>
       <img id="order" style="width: 50px; height: 50px;" @click="order" src="../assets/order.png" alt=""><p>{{ count }}</p>
       <img id="reset" style="width: 50px; height: 50px;" @click="reset" src="../assets/reset.png" alt="">
@@ -31,66 +32,67 @@
         </slick> -->
         <!-- style="width: 200px; height: 200px;" -->
 
-        <div v-bind:style="{ 'padding': '1vw', 'background-color':  '#F4511E' ,'font-size' : '30px'}">
-          <p>스테이크&립</p>
+        <div v-bind:style="{  'background-color':  '#F4511E' ,'font-size' : '30px', 'font-weight': 'bold'}">
+          <p>STEAK & RIB</p>
         </div>
         <slick ref="slick" :options="slickOptions">
            <a><img src="https://postfiles.pstatic.net/MjAxOTA4MDFfODEg/MDAxNTY0NjM0MDg5MzM4.P4RL6ANQTrhHZTrLhbg7TWgkKSBqyg-GHM7jACI2twkg.tV56irLsYISIj7eNa93120nlTN0M1RkUOzBhRicOcj4g.PNG.momoqqq311/시그니처스테이크쉬림프.PNG?type=w773"
-            style="width: 100%; height:  100%;" @click="counter_1_1" alt="40000원"></a>
+            style="width: 100%; height:  100%; " @click="counter_1_1" alt="40000원"></a>
            <a><img src="https://mblogthumb-phinf.pstatic.net/MjAxOTA4MDFfMTk2/MDAxNTY0NjM0MDg5MTQ2.ZvEJVkhsOG1L8q3pvNeg8R0aSVy40sVS2kuYwzaUYyYg.YoElor7Imrh3x8kqsje709imIqqH_Oe0zskyn41wNbEg.PNG.momoqqq311/뉴욕스트립스페이크.PNG?type=w800"
             style="width: 100%; height:  100%;" @click="counter_1_2" alt="35000원"></a>
-           <a><img src="https://mblogthumb-phinf.pstatic.net/MjAxOTA4MDFfOTIg/MDAxNTY0NjM0MDg5NDQ3.7hmNsu5S6BBST3cD0S9EPM-jXh-qUieu-_e0bW0dhv8g.Xxi8NuU5jNgTgSosOO0QhGFrRfrexDlT5vMDJCsyRTAg.PNG.momoqqq311/엠파이어스테이크with본인립아이.PNG?type=w800"
-           style="width: 100%; height:  100%;" @click="counter_1_3" alt="65000원"></a>
            <a><img src="https://mblogthumb-phinf.pstatic.net/MjAxOTA4MDFfNDQg/MDAxNTY0NjM0MDkwMTIz.AdmFEq55OwJHwZ9RZKwAGEpH5fw1XIR6wr6rtui7G8Eg.lFwEMBQMwTK7wRsxYI3Vc-WW52Ds5Rs0vJYTHdEcRIQg.PNG.momoqqq311/시그니처글레이즈드립.PNG?type=w800"
            style="width: 100%; height:  100%;" @click="counter_1_4" alt=""></a>
            <a><img src="https://mblogthumb-phinf.pstatic.net/MjAxOTA4MDFfMTgg/MDAxNTY0NjM0MDg5MzMx.QeKKVlWiNs1GekkBls8Bou8Z-h50HySSFJAQpm5KBJQg.eawFGEBHC5DLh9gZVgp_hmnLqYlzWMlIx6Vtp13y9LUg.PNG.momoqqq311/시그니처립쉬림프.PNG?type=w800" 
             style="width: 100%; height:  100%;" @click="counter_1_5" alt=""></a>
+            <a><img src="https://mblogthumb-phinf.pstatic.net/MjAxOTA4MDFfOTIg/MDAxNTY0NjM0MDg5NDQ3.7hmNsu5S6BBST3cD0S9EPM-jXh-qUieu-_e0bW0dhv8g.Xxi8NuU5jNgTgSosOO0QhGFrRfrexDlT5vMDJCsyRTAg.PNG.momoqqq311/엠파이어스테이크with본인립아이.PNG?type=w800"
+           style="width: 100%; height:  100%;" @click="counter_1_3" alt="65000원"></a>
         </slick>
 
-        <div v-bind:style="{ 'padding': '1vw', 'background-color':  '#F4511E' ,'font-size' : '30px'}">
-          <p>파스타</p>
+        <div v-bind:style="{  'background-color':  '#F4511E' ,'font-size' : '30px', 'font-weight': 'bold'}">
+          <p> PASTA </p>
         </div>
         <slick ref="slick" :options="slickOptions">
-           <a><img src="https://postfiles.pstatic.net/MjAxOTA4MDFfMTE1/MDAxNTY0NjM0Njk3MzY3.3gy8ph3Rv1qkkE_-HEiFQ73wECOsc1kqwCUYomQj4Hog.8Nt4PfMd7km_a5VDYY_cn6940dQaXYPD0sKIy5adqv4g.PNG.momoqqq311/쉐차안쉬림프파스타.PNG?type=w773"
+           <a><img src="https://github.com/Ayeonii/LDCCProject/blob/master/FrontEnd/frontend/src/assets/img/pasta/%EC%89%90%EC%B0%A8%EC%95%88%EC%89%AC%EB%A6%BC%ED%94%84%ED%8C%8C%EC%8A%A4%ED%83%80.PNG?raw=true"
            style="width: 100%; height:  100%;" @click="counter_2_1" alt=""></a>
-           <a><img src="https://postfiles.pstatic.net/MjAxOTA4MDFfMTE1/MDAxNTY0NjM0Njk3MzY3.3gy8ph3Rv1qkkE_-HEiFQ73wECOsc1kqwCUYomQj4Hog.8Nt4PfMd7km_a5VDYY_cn6940dQaXYPD0sKIy5adqv4g.PNG.momoqqq311/쉐차안쉬림프파스타.PNG?type=w773"
+           <a><img src="https://github.com/Ayeonii/LDCCProject/blob/master/FrontEnd/frontend/src/assets/img/pasta/%EB%AA%A8%EC%A7%9C%EB%A0%90%EB%9D%BC%ED%81%AC%EB%A6%BC%ED%8C%8C%EC%8A%A4%ED%83%80.PNG?raw=true"
            style="width: 100%; height:  100%;" @click="counter_2_2" alt=""></a>
-           <a><img src="https://postfiles.pstatic.net/MjAxOTA4MDFfMTIy/MDAxNTY0NjM0Njk3MzE3.bMeLlLCu2xU7WD34Z35mmfZ8FeT1IJSkSdQFa3YQUcog.oyr20X8mWQw1Kg9aoNtbL7Kt2_tWoEEgu9JjBeLAO0Ag.PNG.momoqqq311/케이준쉬림프치킨파스타.PNG?type=w773"
+           <a><img src="https://github.com/Ayeonii/LDCCProject/blob/master/FrontEnd/frontend/src/assets/img/pasta/%EC%94%A8%ED%91%B8%ED%8A%B8%EB%A7%88%EB%A6%AC%EB%82%98%EB%9D%BC.PNG?raw=true"
            style="width: 100%; height:  100%;" @click="counter_2_3" alt=""></a>
-           <a><img src="https://postfiles.pstatic.net/MjAxOTA4MDFfMTA3/MDAxNTY0NjM0Njk3MzAw.4s2xV-myRCd-DP3bsYBOydBc9cAr9mlw_bNJQ-Ngj8Ug.jA5SoE7pC0rLGjtCtOwSVpl3lFd8RJXSsQwLFM4zFEYg.PNG.momoqqq311/크리미버팔로치킨파스타.PNG?type=w773"
+           <a><img src="https://github.com/Ayeonii/LDCCProject/blob/master/FrontEnd/frontend/src/assets/img/pasta/%EC%BC%80%EC%9D%B4%EC%A4%80%EC%89%AC%EB%A6%BC%ED%94%84&%EC%B9%98%ED%82%A8%ED%8C%8C%EC%8A%A4%ED%83%80.PNG?raw=true"
             style="width: 100%; height:  100%;" @click="counter_2_4" alt=""></a>
-           <a><img src="https://postfiles.pstatic.net/MjAxOTA4MDFfMTM4/MDAxNTY0NjM0Njk3MzQ5.Bhd8GblclKnKJkAIMR5WdCeV4kdwjrZAxiN7GRHVAmsg.g6vVkUFRqdiakuJB_ztuKAtihvUSDJQDipaCygOpbRwg.PNG.momoqqq311/씨푸트마리나라.PNG?type=w773" 
+           <a><img src="https://github.com/Ayeonii/LDCCProject/blob/master/FrontEnd/frontend/src/assets/img/pasta/%ED%81%AC%EB%A6%AC%EB%AF%B8%EB%B2%84%ED%8C%94%EB%A1%9C%EC%B9%98%ED%82%A8%ED%8C%8C%EC%8A%A4%ED%83%80.PNG?raw=true" 
             style="width: 100%; height:  100%;" @click="counter_2_5" alt=""></a>
         </slick>
 
-        <div v-bind:style="{ 'padding': '1vw', 'background-color':  '#F4511E' ,'font-size' : '30px'}">
-          <p>샐러드</p>
+        <div v-bind:style="{  'background-color':  '#F4511E' ,'font-size' : '30px',  'font-weight': 'bold'}">
+          <p> SALAD </p>
         </div>
         <slick ref="slick" :options="slickOptions">
-           <a><img src="https://postfiles.pstatic.net/MjAxOTA4MDFfMTAg/MDAxNTY0NjM1MTQ0ODQ5.8KWWLDKqXICYM5825gAtDdBUUdjiwlDCy-MaHzn4Szgg.uC_LIHYjscAQV-OYYgYpx_muxWQlbc8e_d4gP9Ubyw8g.PNG.momoqqq311/스테이크샐러드.PNG?type=w773"
+           <a><img src="https://github.com/Ayeonii/LDCCProject/blob/master/FrontEnd/frontend/src/assets/img/salad/%EA%B9%94%EB%A6%BD%EC%86%8C%EA%B9%94%EB%9D%BC%EB%A7%88%EB%A6%AC%EC%83%90%EB%9F%AC%EB%93%9C.PNG?raw=true"
            style="width: 100%; height:  100%;" @click="counter_3_1" alt=""></a>
-           <a><img src="https://postfiles.pstatic.net/MjAxOTA4MDFfMTc3/MDAxNTY0NjM1MTQ0Mjgz.1ROXn_YXl2q8_rHKHQW4vUJcPvJWSsbQpy7C0HA-zzIg.iOm_f8dnbPvCSGsSkXw3u_pSBxIV1aH9Xn5_q9VamGog.PNG.momoqqq311/깔립소깔라마리샐러드.PNG?type=w773"
+           <a><img src="https://github.com/Ayeonii/LDCCProject/blob/master/FrontEnd/frontend/src/assets/img/salad/%EC%83%81%ED%95%98%EC%9D%B4%EC%B9%98%ED%82%A8%EC%83%90%EB%9F%AC%EB%93%9C.PNG?raw=true"
            style="width: 100%; height:  100%;" @click="counter_3_2" alt=""></a>
-           <a><img src="https://postfiles.pstatic.net/MjAxOTA4MDFfNDAg/MDAxNTY0NjM1MTQ0ODg1._-FjR0HKKS4dFCQ-Ka8nkzg-J5EkAc24cN0h8HxfSNEg.LcKTLy5MU1ofm8H4oP2hL8blMdgqqf8RceZq60xKin0g.PNG.momoqqq311/상하이치킨샐러드.PNG?type=w773"
+           <a><img src="https://github.com/Ayeonii/LDCCProject/blob/master/FrontEnd/frontend/src/assets/img/salad/%EC%8A%A4%ED%85%8C%EC%9D%B4%ED%81%AC%EC%83%90%EB%9F%AC%EB%93%9C.PNG?raw=true"
           style="width: 100%; height:  100%;" @click="counter_3_3" alt=""></a>
-           <a><img src="https://postfiles.pstatic.net/MjAxOTA4MDFfMjU2/MDAxNTY0NjM1MTQ0NjAz.3y6mXcaG9fnN5L3lDzqPVgMAriivCt9lpfT3cduHMJQg.j_4EIq9q7E6qpQ8Tc6daqFTwmcPDkFDCsvrH6z0FVwgg.PNG.momoqqq311/케이준후라이드치킨샐러드.PNG?type=w773"
+           <a><img src="https://github.com/Ayeonii/LDCCProject/blob/master/FrontEnd/frontend/src/assets/img/salad/%EC%BC%80%EC%9D%B4%EC%A4%80%ED%9B%84%EB%9D%BC%EC%9D%B4%EB%93%9C%EC%B9%98%ED%82%A8%EC%83%90%EB%9F%AC%EB%93%9C.PNG?raw=true"
            style="width: 100%; height:  100%;" @click="counter_3_4" alt=""></a>
         </slick>
       
-        <div v-bind:style="{ 'padding': '1vw', 'background-color':  '#F4511E' ,'font-size' : '30px'}">
-          <p>디저트</p>
+        <div v-bind:style="{ 'background-color':  '#F4511E' ,'font-size' : '30px',  'font-weight': 'bold'}">
+          <p> DESSERT </p>
         </div>
         <slick ref="slick" :options="slickOptions">
-          <a><img src="https://postfiles.pstatic.net/MjAxOTA4MDFfMTMz/MDAxNTY0NjM1Mjk1NzU0.eLozryTy82UG3-j9PzwB1fXjXHFqzE_Es5WIIE8OSc4g.c3DlpAKSHIiYLU5TOQvSzBuUa9fuQe1AafR8GTDlOD0g.PNG.momoqqq311/아이스크림또는셔벗.PNG?type=w773"
+          <a><img src="https://github.com/Ayeonii/LDCCProject/blob/master/FrontEnd/frontend/src/assets/img/dessert/%EB%8D%94%EB%B8%94%EB%B8%8C%EB%9D%BC%EC%9A%B0%EB%8B%88%EC%98%B5%EC%84%B8%EC%85%98.PNG?raw=true"
            style="width: 100%; height:  100%;" @click="counter_4_1" alt=""></a>
-           <a><img src="https://postfiles.pstatic.net/MjAxOTA4MDFfMTM1/MDAxNTY0NjM1Mjk1NzYx.OkLUgeh4v1H_gmTX8GGKJcbpcU8_umG-W6TUSZtTjvYg.7gY45NIonHMoAJaOcSKgTq9u8bAJbrguhNwFCegy3Msg.PNG.momoqqq311/더블브라우니옵세션.PNG?type=w773"
+           <a><img src="https://github.com/Ayeonii/LDCCProject/blob/master/FrontEnd/frontend/src/assets/img/dessert/%EC%95%84%EC%9D%B4%EC%8A%A4%ED%81%AC%EB%A6%BC%EB%98%90%EB%8A%94%EC%85%94%EB%B2%97.PNG?raw=true"
+          style="width: 100%; height:  100%;" @click="counter_4_2" alt=""></a>
+           <!-- <a><img src="https://postfiles.pstatic.net/MjAxOTA4MDJfMjc2/MDAxNTY0NzA4MTc5MjIx.UrNSyi4TrHHY5tag45aUC-qqnskT2jvHETQg2KYuM8Eg.3XXy-tfITRmZDs1cDG2KApj09E_spUD6UO4jZ2_qA8sg.PNG.momoqqq311/아포카토.png?type=w773"
+          style="width: 100%; height:  100%;" @click="counter_4_3" alt=""></a> -->
+           <a><img src="https://postfiles.pstatic.net/MjAxOTA4MDJfMTU0/MDAxNTY0NzA4MTc5MTY1.rG_vA6dItrUEtWs_4Km5rtJwtkVe9OuY6EiLasURwFkg.iE_-dYpicCB2gq_tfAq5cpcergOmn6g0BN690rJLg6Ug.PNG.momoqqq311/프라이데이프로즌카푸치노.png?type=w773"
+          style="width: 100%; height:  100%;" @click="counter_4_4" alt=""></a>
+          <a><img src="https://github.com/Ayeonii/LDCCProject/blob/master/FrontEnd/frontend/src/assets/img/dessert/%EC%95%84%EC%9D%B4%EC%8A%A4%ED%81%AC%EB%A6%BC%EB%98%90%EB%8A%94%EC%85%94%EB%B2%97.PNG?raw=true"
           style="width: 100%; height:  100%;" @click="counter_4_2" alt=""></a>
         </slick>
-
-         <!-- <div v-bind:style="{ 'background-color': 'red' }">
-           <p> 선택 메뉴 :  요리1 ({{ steak[0] }}) 개수 요리2 ({{ steak[1] }}) 개수 요리3 ({{ steak[2] }}) 개수
-           요리4 ({{ steak[3] }}) 개수 요리5 ({{ steak[4] }}) 개수</p>
-         </div> -->
       </v-flex>
 
       <v-flex>
@@ -226,6 +228,12 @@
           this.dessert[1]++;
           this.count++;
         },
+        counter_4_3: function () {
+          this.count++;
+        },
+        counter_4_4: function () {
+          this.count++;
+        },
         order: function () {
           var params = [];
 
@@ -294,6 +302,8 @@
               console.log(params);
           this.$router.push({ name: 'cart', params})
         }
+
+
     },
 }
 </script>
