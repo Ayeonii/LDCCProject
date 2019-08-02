@@ -34,7 +34,7 @@ router.get('/getAll', function (req, res, next) {
 
   JSON 형식
     {
-        totalfood:
+        listData:
         [
             {
                 foodname :
@@ -49,6 +49,7 @@ router.get('/getAll', function (req, res, next) {
 
  router.post('/complete', function (req, res, next) {
    console.log("NFC결제 시작")
+   console.log(req.body)
 
     var parser = new Readline()
     port.pipe(parser)
@@ -58,9 +59,14 @@ router.get('/getAll', function (req, res, next) {
         var customerlength = tmp.length;
         var customer = tmp.substring(1,customerlength-1);
         var customerko;
-        var size = req.body.totalfood.length;
+        var size = req.body.listData.length;
+        console.log(req.body.listData.length,"!!!!!!!!!!!!!!!!!!!")
+
+        //  console.log("length : " + size)
         var totalprice = 0
         var totalfoodArr = new Array();
+
+        console.log("---------"+customer)
         if(customer == "KyungIn"){
             customerko = "정경인"
         }else if(customer == "MinWoong"){
@@ -71,12 +77,13 @@ router.get('/getAll', function (req, res, next) {
         
          for(var i = 0; i < size; i++){
              var totalfoodObj = new Object();
-             var fp =  parseInt(req.body.totalfood[i].foodprice)
-             var fa =  parseInt(req.body.totalfood[i].foodamount)
+             var fp =  parseInt(req.body.listData[i].foodprice)
+             var fa =  parseInt(req.body.listData[i].foodamount)
              var foodttprice =  fp * fa
-             totalfoodObj.foodname = req.body.totalfood[i].foodname,
-             totalfoodObj.foodprice = req.body.totalfood[i].foodprice,
-             totalfoodObj.foodamount =req.body.totalfood[i].foodamount,
+             totalfoodObj.foodname = req.body.listData[i].foodname,
+             totalfoodObj.foodprice = req.body.listData[i].foodprice,
+             totalfoodObj.foodamount =req.body.listData[i].foodamount,
+             console.log("totalfoodname" + totalfoodObj.foodname)
              totalfoodObj.foodtotalprice = foodttprice
              totalfoodArr.push(totalfoodObj);
              totalprice += foodttprice
@@ -91,8 +98,10 @@ router.get('/getAll', function (req, res, next) {
          }
          const respond = () => {
              console.log('SYSTEM: 메뉴 결제 완료')
+             console.log("total"+ totalprice)
              res.json({
-                 message: '결제가 완료되었습니다.',
+                 customername: customerko,
+                 totalprice : totalprice
              })
          }
          const onError = (error) => {

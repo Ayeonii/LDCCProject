@@ -42,11 +42,11 @@
       <v-btn class="pb" @click="snackbar = true">현장결제</v-btn>
       <br><br>
       <v-alert type="success" v-if="this.flag==1">
-      이아연님 !
-       결제가 완료되었어요!
+       {{this.customername}}님 !
+       {{this.totalprice}}원 결제가 완료되었어요!
     </v-alert>
     <v-alert type="error" v-else-if="this.flag==2">
-      이아연님 !
+       {{this.customername}}님 !
        결제가 실패하였어요.....
     </v-alert>
     <v-alert type="error" v-else-if="this.flag==3">
@@ -75,6 +75,8 @@ export default {
   data() {
     return {
       flag:0,
+      customername : "",
+      totalprice : "",
       listData: [
         {
           "id": 1,
@@ -124,19 +126,22 @@ export default {
       nfcpay: function() {
         // //todo
         // // post to backend server "nfc"
-        //  axios.post("http://52.79.233.248:3000/api/payment/complete",this.listData)
-        // .then(res => {
-        //     // if (res.data.status) 
-        //     console.log(res)
-        //     // resolve(true)
-        //   // }
-        // })
-        // .catch(e => { // 500 error  
-        // console.log(this.ListData)
-        //   console.log(e)
-        //   // resolve(false)
-        // })
-        this.flag=1;
+          this.$http.post("/api/payment/complete",
+              {listData : this.listData}
+              )
+         .then(res => {
+             console.log(res)
+             this.flag = 1;
+             this.customername = res.data.customername;
+             this.totalprice = res.data.totalprice;
+           // }
+         })
+         .catch(e => { // 500 error  
+         console.log(this.listData)
+           console.log(e)
+           // resolve(false)
+         })
+        // this.flag=1;
         // this.$router.push("/");
       // alert("이아연 님 결제가 완료되었습니다.")
 
