@@ -21,7 +21,7 @@
         <td class="table-td">가격</td>
         <td class="table-td"></td>
       </tr>
-      <tr v-for="val in listData">
+      <tr v-for="val in listData" v-bind:key="val.id">
         <!-- <td>{{val.id}}</td> -->
         <td>
           <img v-bind:src="val.img" />
