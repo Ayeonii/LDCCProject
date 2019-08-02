@@ -11,7 +11,7 @@
     <br />
     <br />
     <h2>&nbsp;&nbsp;&nbsp;&nbsp; 장바구니</h2>
-    <br />    <br />    <br />   <br /> <br />
+    <br />    <br />  
     <table class="cart-table">
       <tr class="tr-name">
         <!-- <td class="table-td">No.</td> -->  
@@ -81,15 +81,15 @@ export default {
         {
           "id": 1,
           "img":
-            "https://postfiles.pstatic.net/MjAxOTA4MDFfMTIy/MDAxNTY0NjM0Njk3MzE3.bMeLlLCu2xU7WD34Z35mmfZ8FeT1IJSkSdQFa3YQUcog.oyr20X8mWQw1Kg9aoNtbL7Kt2_tWoEEgu9JjBeLAO0Ag.PNG.momoqqq311/케이준쉬림프치킨파스타.PNG?type=w773",
+            "https://github.com/Ayeonii/LDCCProject/blob/master/FrontEnd/frontend/src/assets/img/pasta/%EC%BC%80%EC%9D%B4%EC%A4%80%EC%89%AC%EB%A6%BC%ED%94%84&%EC%B9%98%ED%82%A8%ED%8C%8C%EC%8A%A4%ED%83%80.PNG?raw=true",
           "foodname": "케이준쉬림프치킨파스타",
-          "foodprice": 39000,
+          "foodprice": 19500,
           "foodamount": 2
         },
         {
           "id": 2,
           "img":
-            "https://mblogthumb-phinf.pstatic.net/MjAxOTA4MDFfMTk2/MDAxNTY0NjM0MDg5MTQ2.ZvEJVkhsOG1L8q3pvNeg8R0aSVy40sVS2kuYwzaUYyYg.YoElor7Imrh3x8kqsje709imIqqH_Oe0zskyn41wNbEg.PNG.momoqqq311/뉴욕스트립스페이크.PNG?type=w800",
+            "https://github.com/Ayeonii/LDCCProject/blob/master/FrontEnd/frontend/src/assets/img/steak/%EB%89%B4%EC%9A%95%EC%8A%A4%ED%8A%B8%EB%A6%BD%EC%8A%A4%ED%8E%98%EC%9D%B4%ED%81%AC.PNG?raw=true",
           "foodname": "뉴욕스트립스테이크",
           "foodprice": 35000,
           "foodamount": 1
