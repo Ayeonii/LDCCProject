@@ -1,7 +1,8 @@
 <template>
   <div class="cart">
     <span>
-      <v-btn text><a href= "/" >뒤로가기</a> </v-btn>
+      
+      <v-btn text><a href= "/" ><img src="../assets/back.png" style="width: 30%; height: 30%;"></a> </v-btn>
     </span>
     <div>
 
