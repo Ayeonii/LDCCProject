@@ -16,13 +16,14 @@
     <v-spacer></v-spacer>
 
         <br>
-        <div class="text-right" >
-          <v-badge  >
+        <div class="text-right" ><p>
+          <v-badge >
             <template v-slot:badge>{{ count }}</template>
-            <v-icon  @click="order" style=" borderRadius:100px; padding : 10px ;border: 0px solid ; background : #FFEBEE;" >cart &nbsp; &nbsp; </v-icon>
+            <v-icon  @click="order" style=" borderRadius:100px; padding : 10px ;border: 0px solid ; background : #FFEBEE; color : #F4511E" >cart &nbsp; &nbsp; </v-icon>
           </v-badge>
+          </p>
         </div>  
-        <br>
+
       <!-- <v-toolbar-items>
       <img id="order" style="width: 50px; height: 50px;" @click="order" src="../assets/order.png" alt=""><p>{{ count }}</p>
       <img id="reset" style="width: 50px; height: 50px;" @click="reset" src="../assets/reset.png" alt="">
@@ -31,12 +32,12 @@
           <a><img v-bind:src="val.img" style="width: 200px; height: 200px;" @click="counter_1" alt=""></a>
         </slick> -->
         <!-- style="width: 200px; height: 200px;" -->
-
+<br>
         <div v-bind:style="{  'background-color':  '#F4511E' ,'font-size' : '30px', 'font-weight': 'bold'}">
-          <p>STEAK & RIB</p>
+          <p style ="color:#FFCDD2">STEAK & RIB</p>
         </div>
         <slick ref="slick" :options="slickOptions">
-           <a><img src="https://postfiles.pstatic.net/MjAxOTA4MDFfODEg/MDAxNTY0NjM0MDg5MzM4.P4RL6ANQTrhHZTrLhbg7TWgkKSBqyg-GHM7jACI2twkg.tV56irLsYISIj7eNa93120nlTN0M1RkUOzBhRicOcj4g.PNG.momoqqq311/시그니처스테이크쉬림프.PNG?type=w773"
+           <a><img src="https://github.com/Ayeonii/LDCCProject/blob/master/FrontEnd/frontend/src/assets/img/steak/%EC%8B%9C%EA%B7%B8%EB%8B%88%EC%B2%98%EC%8A%A4%ED%85%8C%EC%9D%B4%ED%81%AC&%EC%89%AC%EB%A6%BC%ED%94%84.PNG?raw=true"
             style="width: 100%; height:  100%; " @click="counter_1_1" alt="40000원"></a>
            <a><img src="https://mblogthumb-phinf.pstatic.net/MjAxOTA4MDFfMTk2/MDAxNTY0NjM0MDg5MTQ2.ZvEJVkhsOG1L8q3pvNeg8R0aSVy40sVS2kuYwzaUYyYg.YoElor7Imrh3x8kqsje709imIqqH_Oe0zskyn41wNbEg.PNG.momoqqq311/뉴욕스트립스페이크.PNG?type=w800"
             style="width: 100%; height:  100%;" @click="counter_1_2" alt="35000원"></a>
@@ -47,9 +48,9 @@
             <a><img src="https://mblogthumb-phinf.pstatic.net/MjAxOTA4MDFfOTIg/MDAxNTY0NjM0MDg5NDQ3.7hmNsu5S6BBST3cD0S9EPM-jXh-qUieu-_e0bW0dhv8g.Xxi8NuU5jNgTgSosOO0QhGFrRfrexDlT5vMDJCsyRTAg.PNG.momoqqq311/엠파이어스테이크with본인립아이.PNG?type=w800"
            style="width: 100%; height:  100%;" @click="counter_1_3" alt="65000원"></a>
         </slick>
-
+  <br>
         <div v-bind:style="{  'background-color':  '#F4511E' ,'font-size' : '30px', 'font-weight': 'bold'}">
-          <p> PASTA </p>
+          <p style ="color:#FFCDD2"> PASTA </p>
         </div>
         <slick ref="slick" :options="slickOptions">
            <a><img src="https://github.com/Ayeonii/LDCCProject/blob/master/FrontEnd/frontend/src/assets/img/pasta/%EC%89%90%EC%B0%A8%EC%95%88%EC%89%AC%EB%A6%BC%ED%94%84%ED%8C%8C%EC%8A%A4%ED%83%80.PNG?raw=true"
@@ -63,9 +64,9 @@
            <a><img src="https://github.com/Ayeonii/LDCCProject/blob/master/FrontEnd/frontend/src/assets/img/pasta/%ED%81%AC%EB%A6%AC%EB%AF%B8%EB%B2%84%ED%8C%94%EB%A1%9C%EC%B9%98%ED%82%A8%ED%8C%8C%EC%8A%A4%ED%83%80.PNG?raw=true" 
             style="width: 100%; height:  100%;" @click="counter_2_5" alt=""></a>
         </slick>
-
+<br>
         <div v-bind:style="{  'background-color':  '#F4511E' ,'font-size' : '30px',  'font-weight': 'bold'}">
-          <p> SALAD </p>
+          <p style ="color:#FFCDD2"> SALAD </p>
         </div>
         <slick ref="slick" :options="slickOptions">
            <a><img src="https://github.com/Ayeonii/LDCCProject/blob/master/FrontEnd/frontend/src/assets/img/salad/%EA%B9%94%EB%A6%BD%EC%86%8C%EA%B9%94%EB%9D%BC%EB%A7%88%EB%A6%AC%EC%83%90%EB%9F%AC%EB%93%9C.PNG?raw=true"
@@ -77,9 +78,9 @@
            <a><img src="https://github.com/Ayeonii/LDCCProject/blob/master/FrontEnd/frontend/src/assets/img/salad/%EC%BC%80%EC%9D%B4%EC%A4%80%ED%9B%84%EB%9D%BC%EC%9D%B4%EB%93%9C%EC%B9%98%ED%82%A8%EC%83%90%EB%9F%AC%EB%93%9C.PNG?raw=true"
            style="width: 100%; height:  100%;" @click="counter_3_4" alt=""></a>
         </slick>
-      
+<br>
         <div v-bind:style="{ 'background-color':  '#F4511E' ,'font-size' : '30px',  'font-weight': 'bold'}">
-          <p> DESSERT </p>
+          <p style ="color:#FFCDD2"> DESSERT </p>
         </div>
         <slick ref="slick" :options="slickOptions">
           <a><img src="https://github.com/Ayeonii/LDCCProject/blob/master/FrontEnd/frontend/src/assets/img/dessert/%EB%8D%94%EB%B8%94%EB%B8%8C%EB%9D%BC%EC%9A%B0%EB%8B%88%EC%98%B5%EC%84%B8%EC%85%98.PNG?raw=true"
@@ -93,11 +94,11 @@
           <a><img src="https://github.com/Ayeonii/LDCCProject/blob/master/FrontEnd/frontend/src/assets/img/dessert/%EC%95%84%EC%9D%B4%EC%8A%A4%ED%81%AC%EB%A6%BC%EB%98%90%EB%8A%94%EC%85%94%EB%B2%97.PNG?raw=true"
           style="width: 100%; height:  100%;" @click="counter_4_2" alt=""></a>
         </slick>
+        
+    
+<!-- <br> -->
+ <!-- <v-spacer style="border: 5px solid; color :#F4511E ;"></v-spacer> -->
       </v-flex>
-
-      <v-flex>
-      </v-flex>
-
     </v-layout>
   </v-container>
 </template>

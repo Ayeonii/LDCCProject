@@ -10,7 +10,7 @@
     <v-spacer></v-spacer>
 
     <v-toolbar-items>
-      <v-btn text>TGIF HOME</v-btn>
+      <v-btn text> TGIF HOME</v-btn>
       <v-btn text>MENU</v-btn>
       <v-btn text>FAVORITE</v-btn>
     </v-toolbar-items>
@@ -20,6 +20,11 @@
 <script>
 export default {
 
+methods:{
+  homeGo(){
+    // this.$router.push("http://www.tgif.co.kr/main.asp");
+  }
+}
 }
 </script>
 
