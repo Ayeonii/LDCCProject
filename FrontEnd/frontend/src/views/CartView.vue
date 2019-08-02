@@ -39,7 +39,7 @@
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <div class="pay-bnt">
       <v-btn class="pb" @click="nfcpay">nfc결제</v-btn>&nbsp;&nbsp;&nbsp;&nbsp;
-      <v-btn class="pb" @click="localpay">현장결제</v-btn>
+      <v-btn class="pb" @click="snackbar = true">현장결제</v-btn>
       <br><br>
       <v-alert type="success" v-if="this.flag==1">
       이아연님 !
@@ -49,6 +49,21 @@
       이아연님 !
        결제가 실패하였어요.....
     </v-alert>
+    <v-alert type="error" v-else-if="this.flag==3">
+      주문완료!
+    </v-alert>
+    <v-snackbar
+        v-model="snackbar"
+      >
+        {{ text }}
+        <v-btn
+          color="pink"
+          text
+          @click="snackbar = false"
+        >
+          Close
+        </v-btn>
+      </v-snackbar>
     </div>
   </div>
 </template>
@@ -93,10 +108,14 @@ export default {
           "foodprice": 6300,
           "foodamount": 1
         }
-      ]
+      ],
+      snackbar: false,
+      text: '주문완료!',
+      vertical: true,
     };
   },
   methods: {
+
     removeFood(id) {
       //   console.log(food)
       // this.listData = this.listData.filter(item=>{item.food !==food ; console.log(item.food)})
@@ -118,6 +137,7 @@ export default {
         //   // resolve(false)
         // })
         this.flag=1;
+        // this.$router.push("/");
       // alert("이아연 님 결제가 완료되었습니다.")
 
     // })
@@ -126,7 +146,7 @@ export default {
       localpay: function() {
         //todo
         // post to backend server "nfc"
-        alert("주문 완료! ")
+        // alert("주문 완료! ");
         this.$router.push("/");
 
       }
