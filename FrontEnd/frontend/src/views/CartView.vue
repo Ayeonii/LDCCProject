@@ -24,7 +24,7 @@
       <tr v-for="val in listData" v-bind:key="val.id">
         <!-- <td>{{val.id}}</td> -->
         <td>
-          <img v-bind:src="val.img" />
+          <img v-bind:src="val.img"  />
         </td>
         <td>{{val.foodname}}</td>
         <td>{{val.foodamount}}</td>
@@ -81,7 +81,7 @@ export default {
         {
           "id": 1,
           "img":
-            "https://github.com/Ayeonii/LDCCProject/blob/master/FrontEnd/frontend/src/assets/img/pasta/%EC%BC%80%EC%9D%B4%EC%A4%80%EC%89%AC%EB%A6%BC%ED%94%84&%EC%B9%98%ED%82%A8%ED%8C%8C%EC%8A%A4%ED%83%80.PNG?raw=true",
+            "https://github.com/ruddls00114/images/blob/master/img/pasta/%EC%BC%80%EC%9D%B4%EC%A4%80%EC%89%AC%EB%A6%BC%ED%94%84&%EC%B9%98%ED%82%A8%ED%8C%8C%EC%8A%A4%ED%83%80.PNG?raw=true",
           "foodname": "케이준쉬림프치킨파스타",
           "foodprice": 19500,
           "foodamount": 2
@@ -89,7 +89,7 @@ export default {
         {
           "id": 2,
           "img":
-            "https://github.com/Ayeonii/LDCCProject/blob/master/FrontEnd/frontend/src/assets/img/steak/%EB%89%B4%EC%9A%95%EC%8A%A4%ED%8A%B8%EB%A6%BD%EC%8A%A4%ED%8E%98%EC%9D%B4%ED%81%AC.PNG?raw=true",
+            "https://github.com/ruddls00114/images/blob/master/img/steak/%EB%89%B4%EC%9A%95%EC%8A%A4%ED%8A%B8%EB%A6%BD%EC%8A%A4%ED%8E%98%EC%9D%B4%ED%81%AC.PNG?raw=true",
           "foodname": "뉴욕스트립스테이크",
           "foodprice": 35000,
           "foodamount": 1
@@ -97,7 +97,7 @@ export default {
         {
           "id": 3,
           "img":
-            "https://github.com/Ayeonii/LDCCProject/blob/master/FrontEnd/frontend/src/assets/img/salad/%EC%8A%A4%ED%85%8C%EC%9D%B4%ED%81%AC%EC%83%90%EB%9F%AC%EB%93%9C.PNG?raw=true",
+            "https://github.com/ruddls00114/images/blob/master/img/salad/%EC%83%81%ED%95%98%EC%9D%B4%EC%B9%98%ED%82%A8%EC%83%90%EB%9F%AC%EB%93%9C.PNG?raw=true",
           "foodname": "상하이치킨샐러드",
           "foodprice": 18500,
           "foodamount": 1
@@ -105,7 +105,7 @@ export default {
         {
           "id": 4,
           "img":
-            "https://github.com/Ayeonii/LDCCProject/blob/master/FrontEnd/frontend/src/assets/img/dessert/%EB%8D%94%EB%B8%94%EB%B8%8C%EB%9D%BC%EC%9A%B0%EB%8B%88%EC%98%B5%EC%84%B8%EC%85%98.PNG?raw=true",
+            "https://github.com/ruddls00114/images/blob/master/img/dessert/%EC%95%84%EC%9D%B4%EC%8A%A4%ED%81%AC%EB%A6%BC%EB%98%90%EB%8A%94%EC%85%94%EB%B2%97.PNG?raw=true",
           "foodname": "아이스크림 또는 셔벗",
           "foodprice": 6300,
           "foodamount": 1
@@ -197,8 +197,11 @@ img {
   }
   td {
     // border-bottom: 1px solid #efb1b1;
+    text-align : center;
     border: 1px solid #E53935;
     padding: 15px;
+    // width:%;
+
   }
   tr {
     min-height: 17vh;

@@ -37,15 +37,15 @@
           <p style ="color:#FFCDD2">STEAK & RIB</p>
         </div>
         <slick ref="slick" :options="slickOptions">
-           <a><img src="https://github.com/Ayeonii/LDCCProject/blob/master/FrontEnd/frontend/src/assets/img/steak/%EC%8B%9C%EA%B7%B8%EB%8B%88%EC%B2%98%EC%8A%A4%ED%85%8C%EC%9D%B4%ED%81%AC&%EC%89%AC%EB%A6%BC%ED%94%84.PNG?raw=true"
+           <a><img src="https://github.com/ruddls00114/images/blob/master/img/steak/%EC%8B%9C%EA%B7%B8%EB%8B%88%EC%B2%98%EC%8A%A4%ED%85%8C%EC%9D%B4%ED%81%AC&%EC%89%AC%EB%A6%BC%ED%94%84.PNG?raw=true"
             style="width: 100%; height:  100%; " @click="counter_1_1" alt="40000원"></a>
-           <a><img src="https://mblogthumb-phinf.pstatic.net/MjAxOTA4MDFfMTk2/MDAxNTY0NjM0MDg5MTQ2.ZvEJVkhsOG1L8q3pvNeg8R0aSVy40sVS2kuYwzaUYyYg.YoElor7Imrh3x8kqsje709imIqqH_Oe0zskyn41wNbEg.PNG.momoqqq311/뉴욕스트립스페이크.PNG?type=w800"
+           <a><img src="https://github.com/ruddls00114/images/blob/master/img/steak/%EB%89%B4%EC%9A%95%EC%8A%A4%ED%8A%B8%EB%A6%BD%EC%8A%A4%ED%8E%98%EC%9D%B4%ED%81%AC.PNG?raw=true"
             style="width: 100%; height:  100%;" @click="counter_1_2" alt="35000원"></a>
-           <a><img src="https://mblogthumb-phinf.pstatic.net/MjAxOTA4MDFfNDQg/MDAxNTY0NjM0MDkwMTIz.AdmFEq55OwJHwZ9RZKwAGEpH5fw1XIR6wr6rtui7G8Eg.lFwEMBQMwTK7wRsxYI3Vc-WW52Ds5Rs0vJYTHdEcRIQg.PNG.momoqqq311/시그니처글레이즈드립.PNG?type=w800"
+           <a><img src="https://github.com/ruddls00114/images/blob/master/img/steak/%EC%8B%9C%EA%B7%B8%EB%8B%88%EC%B2%98%EA%B8%80%EB%A0%88%EC%9D%B4%EC%A6%88%EB%93%9C%EB%A6%BD.PNG?raw=true"
            style="width: 100%; height:  100%;" @click="counter_1_4" alt=""></a>
-           <a><img src="https://mblogthumb-phinf.pstatic.net/MjAxOTA4MDFfMTgg/MDAxNTY0NjM0MDg5MzMx.QeKKVlWiNs1GekkBls8Bou8Z-h50HySSFJAQpm5KBJQg.eawFGEBHC5DLh9gZVgp_hmnLqYlzWMlIx6Vtp13y9LUg.PNG.momoqqq311/시그니처립쉬림프.PNG?type=w800" 
+           <a><img src="https://github.com/ruddls00114/images/blob/master/img/steak/%EC%8B%9C%EA%B7%B8%EB%8B%88%EC%B2%98%EB%A6%BD&%EC%89%AC%EB%A6%BC%ED%94%84.PNG?raw=true" 
             style="width: 100%; height:  100%;" @click="counter_1_5" alt=""></a>
-            <a><img src="https://mblogthumb-phinf.pstatic.net/MjAxOTA4MDFfOTIg/MDAxNTY0NjM0MDg5NDQ3.7hmNsu5S6BBST3cD0S9EPM-jXh-qUieu-_e0bW0dhv8g.Xxi8NuU5jNgTgSosOO0QhGFrRfrexDlT5vMDJCsyRTAg.PNG.momoqqq311/엠파이어스테이크with본인립아이.PNG?type=w800"
+            <a><img src="https://github.com/ruddls00114/images/blob/master/img/steak/%EC%97%A0%ED%8C%8C%EC%9D%B4%EC%96%B4%EC%8A%A4%ED%85%8C%EC%9D%B4%ED%81%ACwith%EB%B3%B8%EC%9D%B8%EB%A6%BD%EC%95%84%EC%9D%B4.PNG?raw=true"
            style="width: 100%; height:  100%;" @click="counter_1_3" alt="65000원"></a>
         </slick>
   <br>
@@ -53,15 +53,15 @@
           <p style ="color:#FFCDD2"> PASTA </p>
         </div>
         <slick ref="slick" :options="slickOptions">
-           <a><img src="https://github.com/Ayeonii/LDCCProject/blob/master/FrontEnd/frontend/src/assets/img/pasta/%EC%89%90%EC%B0%A8%EC%95%88%EC%89%AC%EB%A6%BC%ED%94%84%ED%8C%8C%EC%8A%A4%ED%83%80.PNG?raw=true"
+           <a><img src="https://github.com/ruddls00114/images/blob/master/img/pasta/%EB%AA%A8%EC%A7%9C%EB%A0%90%EB%9D%BC%ED%81%AC%EB%A6%BC%ED%8C%8C%EC%8A%A4%ED%83%80.PNG?raw=true"
            style="width: 100%; height:  100%;" @click="counter_2_1" alt=""></a>
-           <a><img src="https://github.com/Ayeonii/LDCCProject/blob/master/FrontEnd/frontend/src/assets/img/pasta/%EB%AA%A8%EC%A7%9C%EB%A0%90%EB%9D%BC%ED%81%AC%EB%A6%BC%ED%8C%8C%EC%8A%A4%ED%83%80.PNG?raw=true"
+           <a><img src="https://github.com/ruddls00114/images/blob/master/img/pasta/%EC%89%90%EC%B0%A8%EC%95%88%EC%89%AC%EB%A6%BC%ED%94%84%ED%8C%8C%EC%8A%A4%ED%83%80.PNG?raw=true"
            style="width: 100%; height:  100%;" @click="counter_2_2" alt=""></a>
-           <a><img src="https://github.com/Ayeonii/LDCCProject/blob/master/FrontEnd/frontend/src/assets/img/pasta/%EC%94%A8%ED%91%B8%ED%8A%B8%EB%A7%88%EB%A6%AC%EB%82%98%EB%9D%BC.PNG?raw=true"
+           <a><img src="https://github.com/ruddls00114/images/blob/master/img/pasta/%EC%94%A8%ED%91%B8%ED%8A%B8%EB%A7%88%EB%A6%AC%EB%82%98%EB%9D%BC.PNG?raw=true"
            style="width: 100%; height:  100%;" @click="counter_2_3" alt=""></a>
-           <a><img src="https://github.com/Ayeonii/LDCCProject/blob/master/FrontEnd/frontend/src/assets/img/pasta/%EC%BC%80%EC%9D%B4%EC%A4%80%EC%89%AC%EB%A6%BC%ED%94%84&%EC%B9%98%ED%82%A8%ED%8C%8C%EC%8A%A4%ED%83%80.PNG?raw=true"
+           <a><img src="https://github.com/ruddls00114/images/blob/master/img/pasta/%EC%BC%80%EC%9D%B4%EC%A4%80%EC%89%AC%EB%A6%BC%ED%94%84&%EC%B9%98%ED%82%A8%ED%8C%8C%EC%8A%A4%ED%83%80.PNG?raw=true"
             style="width: 100%; height:  100%;" @click="counter_2_4" alt=""></a>
-           <a><img src="https://github.com/Ayeonii/LDCCProject/blob/master/FrontEnd/frontend/src/assets/img/pasta/%ED%81%AC%EB%A6%AC%EB%AF%B8%EB%B2%84%ED%8C%94%EB%A1%9C%EC%B9%98%ED%82%A8%ED%8C%8C%EC%8A%A4%ED%83%80.PNG?raw=true" 
+           <a><img src="https://github.com/ruddls00114/images/blob/master/img/pasta/%ED%81%AC%EB%A6%AC%EB%AF%B8%EB%B2%84%ED%8C%94%EB%A1%9C%EC%B9%98%ED%82%A8%ED%8C%8C%EC%8A%A4%ED%83%80.PNG?raw=true" 
             style="width: 100%; height:  100%;" @click="counter_2_5" alt=""></a>
         </slick>
 <br>
@@ -69,13 +69,13 @@
           <p style ="color:#FFCDD2"> SALAD </p>
         </div>
         <slick ref="slick" :options="slickOptions">
-           <a><img src="https://github.com/Ayeonii/LDCCProject/blob/master/FrontEnd/frontend/src/assets/img/salad/%EA%B9%94%EB%A6%BD%EC%86%8C%EA%B9%94%EB%9D%BC%EB%A7%88%EB%A6%AC%EC%83%90%EB%9F%AC%EB%93%9C.PNG?raw=true"
+           <a><img src="https://github.com/ruddls00114/images/blob/master/img/salad/%EA%B9%94%EB%A6%BD%EC%86%8C%EA%B9%94%EB%9D%BC%EB%A7%88%EB%A6%AC%EC%83%90%EB%9F%AC%EB%93%9C.PNG?raw=true"
            style="width: 100%; height:  100%;" @click="counter_3_1" alt=""></a>
-           <a><img src="https://github.com/Ayeonii/LDCCProject/blob/master/FrontEnd/frontend/src/assets/img/salad/%EC%83%81%ED%95%98%EC%9D%B4%EC%B9%98%ED%82%A8%EC%83%90%EB%9F%AC%EB%93%9C.PNG?raw=true"
+           <a><img src="https://github.com/ruddls00114/images/blob/master/img/salad/%EC%83%81%ED%95%98%EC%9D%B4%EC%B9%98%ED%82%A8%EC%83%90%EB%9F%AC%EB%93%9C.PNG?raw=true"
            style="width: 100%; height:  100%;" @click="counter_3_2" alt=""></a>
-           <a><img src="https://github.com/Ayeonii/LDCCProject/blob/master/FrontEnd/frontend/src/assets/img/salad/%EC%8A%A4%ED%85%8C%EC%9D%B4%ED%81%AC%EC%83%90%EB%9F%AC%EB%93%9C.PNG?raw=true"
+           <a><img src="https://github.com/ruddls00114/images/blob/master/img/salad/%EC%8A%A4%ED%85%8C%EC%9D%B4%ED%81%AC%EC%83%90%EB%9F%AC%EB%93%9C.PNG?raw=true"
           style="width: 100%; height:  100%;" @click="counter_3_3" alt=""></a>
-           <a><img src="https://github.com/Ayeonii/LDCCProject/blob/master/FrontEnd/frontend/src/assets/img/salad/%EC%BC%80%EC%9D%B4%EC%A4%80%ED%9B%84%EB%9D%BC%EC%9D%B4%EB%93%9C%EC%B9%98%ED%82%A8%EC%83%90%EB%9F%AC%EB%93%9C.PNG?raw=true"
+           <a><img src="https://github.com/ruddls00114/images/blob/master/img/salad/%EC%BC%80%EC%9D%B4%EC%A4%80%ED%9B%84%EB%9D%BC%EC%9D%B4%EB%93%9C%EC%B9%98%ED%82%A8%EC%83%90%EB%9F%AC%EB%93%9C.PNG?raw=true"
            style="width: 100%; height:  100%;" @click="counter_3_4" alt=""></a>
         </slick>
 <br>
@@ -83,15 +83,13 @@
           <p style ="color:#FFCDD2"> DESSERT </p>
         </div>
         <slick ref="slick" :options="slickOptions">
-          <a><img src="https://github.com/Ayeonii/LDCCProject/blob/master/FrontEnd/frontend/src/assets/img/dessert/%EB%8D%94%EB%B8%94%EB%B8%8C%EB%9D%BC%EC%9A%B0%EB%8B%88%EC%98%B5%EC%84%B8%EC%85%98.PNG?raw=true"
+          <a><img src="https://github.com/ruddls00114/images/blob/master/img/dessert/%EB%8D%94%EB%B8%94%EB%B8%8C%EB%9D%BC%EC%9A%B0%EB%8B%88%EC%98%B5%EC%84%B8%EC%85%98.PNG?raw=true"
            style="width: 100%; height:  100%;" @click="counter_4_1" alt=""></a>
-           <a><img src="https://github.com/Ayeonii/LDCCProject/blob/master/FrontEnd/frontend/src/assets/img/dessert/%EC%95%84%EC%9D%B4%EC%8A%A4%ED%81%AC%EB%A6%BC%EB%98%90%EB%8A%94%EC%85%94%EB%B2%97.PNG?raw=true"
+           <a><img src="https://github.com/ruddls00114/images/blob/master/img/dessert/%EC%95%84%EC%9D%B4%EC%8A%A4%ED%81%AC%EB%A6%BC%EB%98%90%EB%8A%94%EC%85%94%EB%B2%97.PNG?raw=true"
           style="width: 100%; height:  100%;" @click="counter_4_2" alt=""></a>
-           <!-- <a><img src="https://postfiles.pstatic.net/MjAxOTA4MDJfMjc2/MDAxNTY0NzA4MTc5MjIx.UrNSyi4TrHHY5tag45aUC-qqnskT2jvHETQg2KYuM8Eg.3XXy-tfITRmZDs1cDG2KApj09E_spUD6UO4jZ2_qA8sg.PNG.momoqqq311/아포카토.png?type=w773"
-          style="width: 100%; height:  100%;" @click="counter_4_3" alt=""></a> -->
-           <a><img src="https://postfiles.pstatic.net/MjAxOTA4MDJfMTU0/MDAxNTY0NzA4MTc5MTY1.rG_vA6dItrUEtWs_4Km5rtJwtkVe9OuY6EiLasURwFkg.iE_-dYpicCB2gq_tfAq5cpcergOmn6g0BN690rJLg6Ug.PNG.momoqqq311/프라이데이프로즌카푸치노.png?type=w773"
+           <a><img src="https://github.com/ruddls00114/images/blob/master/img/dessert/%EB%8D%94%EB%B8%94%EB%B8%8C%EB%9D%BC%EC%9A%B0%EB%8B%88%EC%98%B5%EC%84%B8%EC%85%98.PNG?raw=true"
           style="width: 100%; height:  100%;" @click="counter_4_4" alt=""></a>
-          <a><img src="https://github.com/Ayeonii/LDCCProject/blob/master/FrontEnd/frontend/src/assets/img/dessert/%EC%95%84%EC%9D%B4%EC%8A%A4%ED%81%AC%EB%A6%BC%EB%98%90%EB%8A%94%EC%85%94%EB%B2%97.PNG?raw=true"
+          <a><img src="https://github.com/ruddls00114/images/blob/master/img/dessert/%EC%95%84%EC%9D%B4%EC%8A%A4%ED%81%AC%EB%A6%BC%EB%98%90%EB%8A%94%EC%85%94%EB%B2%97.PNG?raw=true"
           style="width: 100%; height:  100%;" @click="counter_4_2" alt=""></a>
         </slick>
         
