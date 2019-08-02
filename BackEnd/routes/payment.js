@@ -4,7 +4,7 @@ var router = express.Router();
 var Payment = require('../models/payment');
 var SerialPort = require('serialport')
 var Readline = SerialPort.parsers.Readline
-var port = new SerialPort('/dev/ttyACM2', {
+var port = new SerialPort('/dev/ttyACM0', {
     autoOpen: true,
     baudRate:9600
 }, false);
